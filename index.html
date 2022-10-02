@@ -9,10 +9,13 @@
 </head>
 <body>
 <div class="main__background">
-        <div class="main" id="main"></div>
-        <div class="wrapper">
-        <input type="text" class="score" readonly>
+    <div class="wrapper">
+        <div class="tetris__and-score">
+            <div class="main" id="main"></div>
+            <input type="text" class="score" readonly>
+        </div>
         <div class="controls">
+            <input type="text" class="best__score" readonly>
             <h1>Управление</h1>
             <h3>развернуть &#8593</h3>
             <h3>влево &#8592</h3>
@@ -28,6 +31,8 @@
                 <button class="restart__btn">Restart</button>
             </div>
         </div>
+    </div>
+   
         <div class="overlay">
             <div class="modal">
                 <h2>Game difficulty</h2>

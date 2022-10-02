@@ -6,10 +6,13 @@
     padding: 0;
 }
 $background: rgb(16, 16, 218);
+
+.tetris__and-score {
+    margin-left: 230px;
+}
 .main {
     width: 500px;
     height: 700px;
-    margin: 10px auto;
     overflow: hidden;
     border: 1px solid #000;
     border-radius: 30px;
@@ -58,10 +61,18 @@ $background: rgb(16, 16, 218);
     margin: 10px auto;
     cursor: pointer;
 }
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 60px;
+    margin: 20px auto;
+}
 .controls {
-    position: absolute;
-    top: 100px;
-    right: 300px;
+    display: flex;
+    flex-direction: column;
     text-align: start;
     color: white;
     h3 {
@@ -71,7 +82,7 @@ $background: rgb(16, 16, 218);
     }
 }
 body {
-    background: no-repeat url('https://gamerwall.pro/uploads/posts/2022-03/1648057289_3-gamerwall-pro-p-odnorodnii-fon-krasivie-4.jpg');
+    background: no-repeat url('./Background-main.jpg');
     background-size: fill;
 }
 .overlay {
@@ -81,8 +92,8 @@ body {
     width: 100%;
     height: 100%;
     z-index: 2;
-    background: url('https://gamerwall.pro/uploads/posts/2022-03/1648057289_3-gamerwall-pro-p-odnorodnii-fon-krasivie-4.jpg');
-    background-size: 100% 100%;
+    background: url('./Background-main.jpg');
+    background-size: fill;
 }
 
 .button {
@@ -155,6 +166,13 @@ input {
 .tetris__bg5 {
     background: no-repeat url('./bg6.jpg');
     background-size: 100% 100%;
+}
+.tetris__bg6 {
+    background: no-repeat url('./bg-figure.jpg');
+    background-size: fill;
+}
+.tetris__bg7 {
+    background: transparent;
 }
 .change__bg {
     width: 120px;

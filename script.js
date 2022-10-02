@@ -4,6 +4,9 @@ let modal = document.querySelector('.modal');
 let restart = document.querySelector('.restart__btn')
 let pause = document.querySelector('.pause')
 let speed = 0;
+let showScore = document.querySelector('.best__score')
+let scoreStorage = window.localStorage;
+
 
 
 modal.addEventListener('click', function (e) {
@@ -31,8 +34,7 @@ restart.addEventListener('click', function (e) {
 
 
 function startGame() {
-    
-
+    showScore.value = `Best score: ${scoreStorage.getItem('Gs')}`
 let tetris = document.createElement('div');
 tetris.classList.add('tetris');
 
@@ -328,6 +330,7 @@ createFigure();
 let score = 0;
 let input  = document.querySelector('.score');
 input.value = `score: ${score}`;
+let globalScore = 0;
 function Move() {
     let moveFlag = true;
     let coordinates = [
@@ -396,6 +399,10 @@ function Move() {
          if (document.querySelector(`[posX = "${n}"][posY = "15"]`).classList.contains('set')) {
             clearInterval(interval);
             alert(`GAME OVER \n your score: ${score}`);
+            if (score >= scoreStorage.getItem('Gs')) {
+                globalScore = score;
+                scoreStorage.setItem('Gs', globalScore);
+            }
             break;
          }
         }
@@ -492,8 +499,4 @@ pause.addEventListener('click', function (e) {
             }
     }
 });
-
-
-console.log(figureBody);
-
 }
