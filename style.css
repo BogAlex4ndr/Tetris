@@ -216,4 +216,97 @@ input {
   transform: scale(110%);
   transition-duration: 0.3s;
   cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .excel {
+    width: 32px;
+    height: 32px;
+  }
+  .figure {
+    width: 32px;
+    height: 32px;
+  }
+  .tetris {
+    width: 320px;
+    height: 576px;
+  }
+  .main {
+    width: 320px;
+    height: 576px;
+  }
+  .tetris__and-score {
+    margin-left: 0px;
+  }
+  .descriptions {
+    display: none;
+  }
+  .controls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    color: white;
+  }
+  .controls h3 {
+    margin: 10px auto;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .wrapper {
+    gap: 0px;
+  }
+  .change__bg {
+    max-width: 100%;
+    margin-left: 20px;
+  }
+  .restart__btn {
+    max-width: 100%;
+    margin-left: 20px;
+  }
+  .pause__btn {
+    max-width: 100%;
+    margin-left: 20px;
+  }
+  .best__score {
+    width: 100%;
+  }
+  .control__buttons {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    margin: 0px auto;
+  }
+  .top-arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 125px;
+  }
+  .left-arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 75px;
+    top: 30%;
+  }
+  .right-arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 175px;
+    top: 30%;
+  }
+  .bottom-arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    left: 125px;
+  }
 }/*# sourceMappingURL=style.css.map */

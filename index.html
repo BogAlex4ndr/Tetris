@@ -11,16 +11,24 @@
 <div class="main__background">
     <div class="wrapper">
         <div class="tetris__and-score">
+            <input type="text" class="best__score" readonly>
             <div class="main" id="main"></div>
             <input type="text" class="score" readonly>
         </div>
         <div class="controls">
-            <input type="text" class="best__score" readonly>
-            <h1>Управление</h1>
-            <h3>развернуть &#8593</h3>
-            <h3>влево &#8592</h3>
-            <h3>вправо &#8594</h3>
-            <h3> ускорить &#8595</h3>
+           <div class="descriptions">
+                <h1>Управление</h1>
+                <h3>развернуть &#8593</h3>
+                <h3>влево &#8592</h3>
+                <h3>вправо &#8594</h3>
+                <h3> ускорить &#8595</h3>
+           </div>
+           <div class="control__buttons">
+               <button class="top-arrow">top</button>
+               <button class="left-arrow">left</button>
+               <button class="right-arrow">right</button>
+               <button class="bottom-arrow">down</button>
+        </div>
             <div class="backgrounds">
                 <button class="change__bg">Change background</button>
             </div>
@@ -32,7 +40,6 @@
             </div>
         </div>
     </div>
-   
         <div class="overlay">
             <div class="modal">
                 <h2>Game difficulty</h2>
