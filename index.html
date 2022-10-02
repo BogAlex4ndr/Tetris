@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="main__background">
+        <div class="main" id="main"></div>
+        <div class="wrapper">
+        <input type="text" class="score" readonly>
+        <div class="controls">
+            <h1>Управление</h1>
+            <h3>развернуть &#8593</h3>
+            <h3>влево &#8592</h3>
+            <h3>вправо &#8594</h3>
+            <h3> ускорить &#8595</h3>
+            <div class="backgrounds">
+                <button class="change__bg">Change background</button>
+            </div>
+            <div class="pause">
+                <button class="pause__btn">pause</button>
+            </div>
+            <div class="restart">
+                <button class="restart__btn">Restart</button>
+            </div>
+        </div>
+        <div class="overlay">
+            <div class="modal">
+                <h2>Game difficulty</h2>
+                <button class="button easy">Easy</button>
+                <button class="button normal">Normal</button>
+                <button class="button hard">Hard</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+    
+
+<script src="script.js"></script>
+<script src="bg.js"></script>
+</body>
+</html>

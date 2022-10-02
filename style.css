@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 500px;
+  height: 700px;
+  margin: 10px auto;
+  overflow: hidden;
+  border: 1px solid #000;
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0);
+}
+
+.tetris {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+  width: 500px;
+  height: 900px;
+  overflow: hidden;
+  background: no-repeat url("./Tet-BG.jpg");
+  background-size: 100% 100%;
+}
+
+.excel {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.505);
+  border-radius: 5%;
+  background: transparent;
+}
+
+.figure {
+  width: 50px;
+  height: 50px;
+  background: url("./block.jpg") no-repeat;
+  background-size: cover;
+}
+
+.set {
+  background: url("./block.jpg") no-repeat;
+  background-size: cover;
+}
+
+.score {
+  display: block;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.controls {
+  position: absolute;
+  top: 100px;
+  right: 300px;
+  text-align: start;
+  color: white;
+}
+.controls h3 {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+body {
+  background: no-repeat url("https://gamerwall.pro/uploads/posts/2022-03/1648057289_3-gamerwall-pro-p-odnorodnii-fon-krasivie-4.jpg");
+  background-size: 100% 100%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: url("https://gamerwall.pro/uploads/posts/2022-03/1648057289_3-gamerwall-pro-p-odnorodnii-fon-krasivie-4.jpg");
+  background-size: 100% 100%;
+}
+
+.button {
+  padding: 20px;
+  width: 100px;
+  margin: 10px auto;
+  background-color: rgb(0, 0, 0);
+  border: 3px solid black;
+  border-radius: 10px;
+  color: white;
+}
+.button:hover {
+  transform: scale(110%);
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.easy:hover {
+  background-color: green;
+}
+
+.normal:hover {
+  background-color: orange;
+}
+
+.hard:hover {
+  background-color: red;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background: rgb(255, 0, 0);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(128, 0, 0) 90%);
+  margin: 100px auto;
+  border: 5px solid black;
+  border-radius: 20px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px black;
+}
+
+input {
+  text-align: center;
+  font-size: medium;
+  border-radius: 16px;
+  width: 120px;
+}
+
+.tetris__bg {
+  background: no-repeat url("./bg2.webp");
+  background-size: 100% 100%;
+}
+
+.tetris__bg2 {
+  background: no-repeat url("./bg3.jpg");
+  background-size: 100% 100%;
+}
+
+.tetris__bg3 {
+  background: no-repeat url("./bg4.jpg");
+  background-size: 100% 100%;
+}
+
+.tetris__bg4 {
+  background: no-repeat url("./bg5.jpg");
+  background-size: 100% 100%;
+}
+
+.tetris__bg5 {
+  background: no-repeat url("./bg6.jpg");
+  background-size: 100% 100%;
+}
+
+.change__bg {
+  width: 120px;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px;
+  color: white;
+  background-color: rgb(66, 65, 65);
+}
+.change__bg:hover {
+  transform: scale(110%);
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.restart__btn {
+  width: 120px;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px;
+  color: white;
+  background-color: rgb(66, 65, 65);
+}
+.restart__btn:hover {
+  transform: scale(110%);
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.pause__btn {
+  width: 120px;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px;
+  color: white;
+  background-color: rgb(66, 65, 65);
+}
+.pause__btn:hover {
+  transform: scale(110%);
+  transition-duration: 0.3s;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
