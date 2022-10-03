@@ -96,7 +96,7 @@ body {
     background-size: fill;
 }
 
-.button {
+.start__button {
 padding: 20px;
 width: 100px;
 margin: 10px auto;
@@ -297,15 +297,12 @@ input {
         background-color: white;
     }
     .left-arrow {
-        img {
             width: 64px;
             height: 64px;
             border-radius: 50%;
             position: absolute;
             left: 20px;
             background-color: white;
-        }
-        
     }
     .right-arrow {
         width: 64px;

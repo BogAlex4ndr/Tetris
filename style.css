@@ -94,7 +94,7 @@ body {
   background-size: fill;
 }
 
-.button {
+.start__button {
   padding: 20px;
   width: 100px;
   margin: 10px auto;
@@ -103,7 +103,7 @@ body {
   border-radius: 10px;
   color: white;
 }
-.button:hover {
+.start__button:hover {
   transform: scale(110%);
   transition-duration: 0.3s;
   cursor: pointer;
@@ -301,7 +301,7 @@ input {
     right: 20px;
     background-color: white;
   }
-  .left-arrow img {
+  .left-arrow {
     width: 64px;
     height: 64px;
     border-radius: 50%;

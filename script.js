@@ -24,7 +24,7 @@ modal.addEventListener('click', function (e) {
         speed = 300;
         main.style.boxShadow ='5px 5px 5px red';
     }
-    if (e.target.classList.contains('button')) {
+    if (e.target.classList.contains('start__button')) {
         modal.style.display = 'none';
         overlay.style.display = 'none';
         startGame()
@@ -420,7 +420,7 @@ let interval = setInterval(() => {
 }, speed);
 
 let flag = true;
-
+/////////////// Управление стрелками на клавитатуре ////////////////////
 window.addEventListener('keydown', function(e) {
     let coordinates1 = [figureBody[0].getAttribute('posX'),figureBody[0].getAttribute('posY')];
     let coordinates2 = [figureBody[1].getAttribute('posX'),figureBody[1].getAttribute('posY')];
@@ -490,6 +490,9 @@ window.addEventListener('keydown', function(e) {
         }
     }      
 });
+/////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////Кнопка Паузы /////////////////////////////////////////
 onPause = false;
 
 pause.addEventListener('click', function (e) {
@@ -506,4 +509,75 @@ pause.addEventListener('click', function (e) {
             }
     }
 });
-}
+/////////////// Управление кнопками на экране ////////////////////
+window.addEventListener('click', function(e) {
+    let coordinates1 = [figureBody[0].getAttribute('posX'),figureBody[0].getAttribute('posY')];
+    let coordinates2 = [figureBody[1].getAttribute('posX'),figureBody[1].getAttribute('posY')];
+    let coordinates3 = [figureBody[2].getAttribute('posX'),figureBody[2].getAttribute('posY')];
+    let coordinates4 = [figureBody[3].getAttribute('posX'),figureBody[3].getAttribute('posY')];
+
+    function getNewState(a) {
+
+        flag = true;
+
+        let figureNew = [
+            document.querySelector(`[posX = "${+coordinates1[0] + a}"][posY = "${coordinates1[1]}"]`),
+            document.querySelector(`[posX = "${+coordinates2[0] + a}"][posY = "${coordinates2[1]}"]`),
+            document.querySelector(`[posX = "${+coordinates3[0] + a}"][posY = "${coordinates3[1]}"]`),
+            document.querySelector(`[posX = "${+coordinates4[0] + a}"][posY = "${coordinates4[1]}"]`),
+        ];
+        for (let i = 0; i < figureNew.length; i++) {
+            if(!figureNew[i] || figureNew[i].classList.contains('set')) {
+                flag = false;
+            } 
+        }
+        if (flag === true) {
+            for (let i = 0; i < figureBody.length; i++) {
+                figureBody[i].classList.remove('figure'); 
+        }
+            figureBody = figureNew;
+            for (let i = 0; i < figureBody.length; i++) {
+                figureBody[i].classList.add('figure'); 
+        }
+        }
+    }
+
+
+    if(e.target.classList.contains('left-arrow') && onPause === false) {
+        getNewState(-1)
+    }else if(e.target.classList.contains('right-arrow') && onPause === false) {
+        getNewState(1)
+    }else if (e.target.classList.contains('bottom-arrow') && onPause === false) {
+        Move()
+    }else if (e.target.classList.contains('top-arrow') && onPause === false) {
+        flag = true;
+
+        let figureNew = [
+            document.querySelector(`[posX = "${+coordinates1[0] + mainArr[curentFigure][rotate + 2][0][0]}"][posY = "${+coordinates1[1] + mainArr[curentFigure][rotate + 2][0][1]}"]`),
+            document.querySelector(`[posX = "${+coordinates2[0] + mainArr[curentFigure][rotate + 2][1][0]}"][posY = "${+coordinates2[1] + mainArr[curentFigure][rotate + 2][1][1]}"]`),
+            document.querySelector(`[posX = "${+coordinates3[0] + mainArr[curentFigure][rotate + 2][2][0]}"][posY = "${+coordinates3[1] + mainArr[curentFigure][rotate + 2][2][1]}"]`),
+            document.querySelector(`[posX = "${+coordinates4[0] + mainArr[curentFigure][rotate + 2][3][0]}"][posY = "${+coordinates4[1] + mainArr[curentFigure][rotate + 2][3][1]}"]`),
+        ];
+        for (let i = 0; i < figureNew.length; i++) {
+            if(!figureNew[i] || figureNew[i].classList.contains('set')) {
+                flag = false;
+            } 
+        }
+        if (flag === true) {
+            for (let i = 0; i < figureBody.length; i++) {
+                figureBody[i].classList.remove('figure'); 
+        }
+            figureBody = figureNew;
+            for (let i = 0; i < figureBody.length; i++) {
+                figureBody[i].classList.add('figure'); 
+        }
+        if (rotate < 4) {
+            rotate++
+        }else {
+            rotate = 1;
+        }
+        }
+    }      
+});
+/////////////////////////////////////////////////////////////////////////////////
+} /////// конец функции startGame() /////////////
