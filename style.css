@@ -176,14 +176,18 @@ input {
 }
 
 .tetris__bg6 {
-  background: no-repeat url("./bg-figure.jpg");
-  background-size: fill;
+  background: no-repeat url("./bg7.gif") center;
+  background-size: 100% 100%;
 }
 
 .tetris__bg7 {
+  background: no-repeat url("./bg8.gif");
+  background-size: 100% 100%;
+}
+
+.tetris__bg8 {
   background: no-repeat url("./phoebe.jpg");
   background-size: 100% 100%;
-  margin-top: 300px;
 }
 
 .change__bg {

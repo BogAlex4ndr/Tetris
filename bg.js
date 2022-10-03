@@ -23,9 +23,13 @@ changeBg.addEventListener('click', function (e) {
         clickCounter++
         document.querySelector('.tetris').classList.replace("tetris__bg6",'tetris__bg7');    
     }
+    else if (clickCounter < 8) {
+        clickCounter++
+        document.querySelector('.tetris').classList.replace("tetris__bg7",'tetris__bg8');    
+    }
     else {
         clickCounter = 0;
-        document.querySelector('.tetris').classList.remove('tetris__bg7');
+        document.querySelector('.tetris').classList.remove('tetris__bg8');
     }
     console.log(clickCounter)
 })
