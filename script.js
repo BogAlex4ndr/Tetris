@@ -1,11 +1,15 @@
 
 let overlay = document.querySelector('.overlay');
 let modal = document.querySelector('.modal');
-let restart = document.querySelector('.restart__btn')
-let pause = document.querySelector('.pause')
+let restart = document.querySelector('.restart__btn');
+let pause = document.querySelector('.pause');
 let speed = 0;
-let showScore = document.querySelector('.best__score')
+let showScore = document.querySelector('.best__score');
 let scoreStorage = window.localStorage;
+let arrowTop = document.querySelector('.top-arrow');
+let arrowLeft = document.querySelector('.left-arrow');
+let arrowRight = document.querySelector('.right-arrow');
+let arrowDowd = document.querySelector('.bottom-arrow');
 
 
 
@@ -61,6 +65,7 @@ for (let y = 18; y>0; y--) {
 }
 
 let x = 5, y = 15;
+
 
 let mainArr = [
     //Stick
@@ -448,6 +453,7 @@ window.addEventListener('keydown', function(e) {
         }
     }
 
+
     if(e.keyCode === 37 && onPause === false) {
         getNewState(-1)
     }else if(e.keyCode === 39 && onPause === false) {
@@ -485,6 +491,7 @@ window.addEventListener('keydown', function(e) {
     }      
 });
 onPause = false;
+
 pause.addEventListener('click', function (e) {
     if (e.target.classList.contains('pause__btn')) {
         console.log(onPause)

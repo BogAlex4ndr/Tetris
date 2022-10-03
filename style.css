@@ -177,12 +177,11 @@ input {
 }
 
 .change__bg {
-  width: 120px;
-  padding: 10px;
-  border-radius: 20px;
+  padding: 0px;
   margin: 10px;
+  border-radius: 20px;
   color: white;
-  background-color: rgb(66, 65, 65);
+  background-color: rgb(211, 211, 211);
 }
 .change__bg:hover {
   transform: scale(110%);
@@ -191,12 +190,11 @@ input {
 }
 
 .restart__btn {
-  width: 120px;
-  padding: 10px;
+  padding: 0px;
   border-radius: 20px;
   margin: 10px;
   color: white;
-  background-color: rgb(66, 65, 65);
+  background-color: rgb(211, 211, 211);
 }
 .restart__btn:hover {
   transform: scale(110%);
@@ -205,12 +203,12 @@ input {
 }
 
 .pause__btn {
-  width: 120px;
-  padding: 10px;
+  border: 0;
+  padding: 0px;
   border-radius: 20px;
   margin: 10px;
   color: white;
-  background-color: rgb(66, 65, 65);
+  background-color: rgb(211, 211, 211);
 }
 .pause__btn:hover {
   transform: scale(110%);
@@ -243,6 +241,11 @@ input {
   .main {
     width: 320px;
     height: 480px;
+  }
+  .buttons__secondary {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
   }
   .tetris__and-score {
     margin-left: 0px;
@@ -282,40 +285,45 @@ input {
     width: 100%;
   }
   .control__buttons {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     position: relative;
-    width: 300px;
+    width: 100vw;
     height: 80px;
     margin: 0px auto;
   }
   .top-arrow {
-    width: 50px;
-    height: 50px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     position: absolute;
     top: 0px;
-    left: 250px;
+    right: 20px;
+    background-color: white;
   }
-  .left-arrow {
-    width: 50px;
-    height: 50px;
+  .left-arrow img {
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     position: absolute;
-    left: 5px;
+    left: 20px;
+    background-color: white;
   }
   .right-arrow {
-    width: 50px;
-    height: 50px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     position: absolute;
-    left: 65px;
+    left: 85px;
+    background-color: white;
   }
   .bottom-arrow {
-    width: 50px;
-    height: 50px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     position: absolute;
     top: 0%;
-    left: 190px;
+    right: 85px;
+    background-color: white;
   }
 }/*# sourceMappingURL=style.css.map */
