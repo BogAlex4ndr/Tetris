@@ -4,6 +4,14 @@
   padding: 0;
 }
 
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
+
 .tetris__and-score {
   margin-left: 230px;
 }
@@ -173,7 +181,9 @@ input {
 }
 
 .tetris__bg7 {
-  background: transparent;
+  background: no-repeat url("./phoebe.jpg");
+  background-size: 100% 100%;
+  margin-top: 300px;
 }
 
 .change__bg {
@@ -301,13 +311,23 @@ input {
     right: 20px;
     background-color: white;
   }
+  .top-arrow:active {
+    transform: scale(110%);
+    transition-duration: 0.3s;
+    cursor: pointer;
+  }
   .left-arrow {
     width: 64px;
     height: 64px;
     border-radius: 50%;
+    background-color: white;
     position: absolute;
     left: 20px;
-    background-color: white;
+  }
+  .left-arrow:active {
+    transform: scale(110%);
+    transition-duration: 0.3s;
+    cursor: pointer;
   }
   .right-arrow {
     width: 64px;
@@ -317,6 +337,11 @@ input {
     left: 85px;
     background-color: white;
   }
+  .right-arrow:active {
+    transform: scale(110%);
+    transition-duration: 0.3s;
+    cursor: pointer;
+  }
   .bottom-arrow {
     width: 64px;
     height: 64px;
@@ -325,5 +350,10 @@ input {
     top: 0%;
     right: 85px;
     background-color: white;
+  }
+  .bottom-arrow:active {
+    transform: scale(110%);
+    transition-duration: 0.3s;
+    cursor: pointer;
   }
 }/*# sourceMappingURL=style.css.map */

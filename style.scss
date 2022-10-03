@@ -5,6 +5,14 @@
     margin: 0;
     padding: 0;
 }
+img {
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+     user-select:none;
+}
+
 $background: rgb(16, 16, 218);
 
 .tetris__and-score {
@@ -172,7 +180,9 @@ input {
     background-size: fill;
 }
 .tetris__bg7 {
-    background: transparent;
+    background: no-repeat url('./phoebe.jpg');
+    background-size: 100% 100%;
+    margin-top: 300px;
 }
 .change__bg {
     padding: 0px;
@@ -295,14 +305,24 @@ input {
         top: 0px;
         right: 20px;
         background-color: white;
+        &:active{
+            transform: scale(110%);
+            transition-duration: .3s;
+            cursor: pointer;
+        }
     }
-    .left-arrow {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            position: absolute;
-            left: 20px;
-            background-color: white;
+    .left-arrow { 
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        left: 20px;
+        &:active{
+            transform: scale(110%);
+            transition-duration: .3s;
+            cursor: pointer;
+        }      
     }
     .right-arrow {
         width: 64px;
@@ -311,6 +331,11 @@ input {
         position: absolute;
         left: 85px;
         background-color: white;
+        &:active{
+            transform: scale(110%);
+            transition-duration: .3s;
+            cursor: pointer;
+        }
     }
     .bottom-arrow {
         width: 64px;
@@ -320,6 +345,11 @@ input {
         top: 0%;
         right: 85px;
         background-color: white;
+        &:active{
+            transform: scale(110%);
+            transition-duration: .3s;
+            cursor: pointer;
+        }
     }
 }
 
